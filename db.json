@@ -63,6 +63,70 @@
       "imageHover": "https://shop-t1-na.gg/cdn/shop/products/T1-pen_all_400x.jpg?v=1662160397",
       "price": 76,
       "categoryId": "3"
+    },
+    {
+      "id": "9",
+      "name": "Nike x T1 Club_Black",
+      "image": "https://shop-t1-na.gg/cdn/shop/products/KakaoTalk_20210213_161950462_35e9afb1-b201-4b98-90dd-7c49e0a5280c_400x.jpg?v=1613656864",
+      "imageHover": "https://shop-t1-na.gg/cdn/shop/products/SWEATWHITEANDBLACKIMG_G_1830_bc95bc1e-73cf-4a99-abab-795ce0987592_400x.jpg?v=1613656864",
+      "price": 100,
+      "categoryId": "4"
+    },
+    {
+      "id": "10",
+      "name": "T1 x NIKE Cap",
+      "image": "https://shop-t1-na.gg/cdn/shop/products/7148dd23f09705b8eb56adfa627f958d_400x.jpg?v=1661281968",
+      "imageHover": "https://shop-t1-na.gg/cdn/shop/products/bf37a7a5ef86ca116836a1bb80bbe488_400x.jpg?v=1661281968",
+      "price": 80,
+      "categoryId": "4"
+    },
+    {
+      "id": "11",
+      "name": "T1 x Sambypen Sticker",
+      "image": "https://shop-t1-na.gg/cdn/shop/products/210911_ecommerce_sambypen_sticker02_400x.png?v=1631709255",
+      "imageHover": "https://shop-t1-na.gg/cdn/shop/products/210911_ecommerce_sambypen_sticker02_400x.png?v=1631709255",
+      "price": 50,
+      "categoryId": "4"
+    },
+    {
+      "id": "12",
+      "name": "T1 x Sambypen Keyring",
+      "image": "https://shop-t1-na.gg/cdn/shop/products/KakaoTalk_20211020_142912517_400x.jpg?v=1634707822",
+      "imageHover": "https://shop-t1-na.gg/cdn/shop/products/KakaoTalk_20211020_142912517_01_400x.jpg?v=1634707822",
+      "price": 50,
+      "categoryId": "4"
+    },
+    {
+      "id": "13",
+      "name": "2023 T1 Uniform Spring Jacket",
+      "image": "https://shop-t1-na.gg/cdn/shop/products/spring-jacket-front_400x.jpg?v=1680302371",
+      "imageHover": "https://shop-t1-na.gg/cdn/shop/products/GT_1900_400x.jpg?v=1680302371",
+      "price": 90,
+      "categoryId": "5"
+    },
+    {
+      "id": "14",
+      "name": "2023 T1 Uniform Spring Jersey",
+      "image": "https://shop-t1-na.gg/cdn/shop/products/2023-jersey-front_400x.jpg?v=1677522882",
+      "imageHover": "https://shop-t1-na.gg/cdn/shop/products/CopyofT1_Gumayusi_Fcopy_400x.jpg?v=1677531070",
+      "price": 90,
+      "categoryId": "5"
+    },
+    {
+      "id": "15",
+      "name": "T1 2023 Worlds Edition Mug",
+      "image": "https://shop-t1-na.gg/cdn/shop/files/bf5d41735d8e489dda2e19b57626c41e_400x.jpg?v=1697739633",
+      "imageHover": "https://shop-t1-na.gg/cdn/shop/files/b45e87dc3a92f0f466124de42a9ac867_400x.jpg?v=1697739633",
+      "price": 50,
+      "categoryId": "5"
+    },
+    {
+      "id": "16",
+      "name": "T1 Logo Badge - Champions Edition",
+      "image": "https://shop-t1-na.gg/cdn/shop/files/57f426bb8dcf2ada11f72167c1893305_400x.jpg?v=1706230551",
+      "imageHover": "https://shop-t1-na.gg/cdn/shop/files/57f426bb8dcf2ada11f72167c1893305_400x.jpg?v=1706230551",
+      "price": 50,
+      "categoryId": "5"
     }
   ],
   "categories": [
@@ -77,6 +141,14 @@
     {
       "id": "3",
       "name": "Accessory"
+    },
+    {
+      "id": "4",
+      "name": "Collaboration"
+    },
+    {
+      "id": "5",
+      "name": "Sale"
     }
   ],
   "orders": [

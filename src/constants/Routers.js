@@ -7,4 +7,6 @@ export const ROUTERS = {
 	LOGIN: '/login',
 	PROFILE: '/profile',
 	ORDER_HISTORY: '/order-history',
+	ABOUT: '/about',
+	CONTACT: '/contact',
 };
