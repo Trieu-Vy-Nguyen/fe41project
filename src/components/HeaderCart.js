@@ -16,7 +16,7 @@ import { TargetPrice } from '../pages/Cart';
 
 export default function Cart() {
 	const carts = useSelector((state) => state.cart.carts);
-	const dispatch = useDispatch();
+	const dispatch = useDispatch();	
 
 	const [open, setOpen] = useState(false);
 
@@ -50,7 +50,7 @@ export default function Cart() {
 	return (
 		<>
 			<Button className="relative" type="text" onClick={showDrawer}>
-				<ShoppingBag size={20} color="white" />
+				<ShoppingBag size={20} color="black" />
 				<p className="absolute text-black top-[-10px] right-0 text-xs font-bold">
 					{carts.length}
 				</p>
@@ -65,21 +65,21 @@ export default function Cart() {
 					<div className="">
 						{TargetPrice > calculateTotal() ? (
 							<p>
-								Buy{' '}
+								Mua thêm{' '}
 								<span className="text-red-400">
 									<Price
 										value={TargetPrice - calculateTotal()}
 									/>
 								</span>{' '}
-								more for get <strong>Free Shipping!!</strong>
+								để được <strong>Free Ship!!</strong>
 							</p>
 						) : (
-							<p>You get a Free Shipping</p>
+							<p>Bạn đã được FreeShip</p>
 						)}
 						<div className="max-h-full my-4 space-y-3 col overscroll-auto">
 							{carts.map((product) => (
 								<div
-									key={product.id}
+									key={`${product.id}-${product.size}`} // Cập nhật key với size
 									className="flex flex-row items-center justify-between w-full"
 								>
 									<div className="flex flex-row gap-3">
@@ -94,6 +94,9 @@ export default function Cart() {
 											<p className="text-sm">
 												{product.name}
 											</p>
+											<div className="text-xs text-gray-500">
+												Size: {product.size}
+											</div>
 											<div className="border border-[#d0d0d0] h-[30px] flex flex-row items-center mt-2 w-[75px]">
 												<button
 													className="flex items-center justify-center flex-1"
@@ -139,7 +142,7 @@ export default function Cart() {
 								size="large"
 								className="w-full"
 							>
-								View Cart
+								Đến giỏ hàng
 							</Button>
 						</Link>
 						<Link to={ROUTERS.CHECKOUT} onClick={onClose}>
@@ -148,7 +151,7 @@ export default function Cart() {
 								size="large"
 								className="w-full"
 							>
-								Checkout
+								Thanh Toán
 							</Button>
 						</Link>
 					</div>

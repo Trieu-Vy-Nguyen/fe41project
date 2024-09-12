@@ -12,4 +12,4 @@ export default memo(function Price({ value }) {
 			prefix={'$'}
 		/>
 	);
-});
+}); 

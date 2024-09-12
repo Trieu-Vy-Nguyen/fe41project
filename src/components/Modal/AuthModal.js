@@ -34,7 +34,7 @@ const Auth = () => {
 		if (key === '3') {
 			modal.confirm({
 				title: 'Logging Out',
-				content: 'Do you Want to logout?',
+				content: 'Bạn có muốn đăng xuất không?',
 				onOk() {
 					dispatch(logoutRequest());
 				},
@@ -45,15 +45,15 @@ const Auth = () => {
 
 	const items = [
 		{
-			label: 'Profile',
+			label: 'Hồ Sơ',
 			key: '1',
 		},
 		{
-			label: 'Order History',
+			label: 'Lịch sử đặt hàng',
 			key: '2',
 		},
 		{
-			label: 'Logout',
+			label: 'Đăng xuất',
 			key: '3',
 		},
 	];
@@ -63,7 +63,7 @@ const Auth = () => {
 			{user ? (
 				<Dropdown menu={{ items, onClick }}>
 					<Space>
-						<p className='text-white'>
+						<p className='text-black'>
 							{user.firstname} {user.lastname}
 						</p>
 						<ChevronDown size={16} />
@@ -71,7 +71,7 @@ const Auth = () => {
 				</Dropdown>
 			) : (
 				<Button type="text" onClick={showModal}>
-					<User color="white" size={20} />
+					<User color="black" size={20} />
 				</Button>
 			)}
 

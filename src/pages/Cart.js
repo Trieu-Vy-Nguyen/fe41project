@@ -5,13 +5,14 @@ import {
 	removeAllProductToCart,
 	removeProductToCart,
 } from '../store/redux/CartSlice';
-import { Button, Image, Input } from 'antd';
+import { Button, Image } from 'antd';
 import { CircleX } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ROUTERS } from '../constants/Routers';
 import Price from '../components/Price';
 
 export const TargetPrice = 2000;
+
 export default function Cart() {
 	const carts = useSelector((state) => state.cart.carts);
 	const dispatch = useDispatch();
@@ -36,8 +37,6 @@ export default function Cart() {
 	};
 
 	const totalPrice = calculateTotal();
-
-	// TargetPrice là một hạn mức do Chủ Shop tạo ra, nếu tổng tiền đơn hàng lớn hơn hoặc bằng hạn mức này thì sẽ được free ship
 	const isFreeShip = TargetPrice <= totalPrice;
 
 	return (
@@ -46,26 +45,27 @@ export default function Cart() {
 				<div className="grid col-span-2 p-6 bg-white shadow-md">
 					<div className="p-5 border border-dashed border-[#e9e9e9]">
 						{isFreeShip ? (
-							<p>You get a Free Shipping</p>
+							<p>Bạn đã được freeship</p>
 						) : (
 							<p>
-								Buy{' '}
+								Mua thêm{' '}
 								<span className="text-red-400">
 									<Price value={TargetPrice - totalPrice} />
 								</span>{' '}
-								more for get <strong>Free Shipping!!</strong>
+								để được <strong>Free Ship !!</strong>
 							</p>
 						)}
 					</div>
-					<table class="table-auto w-full mt-6 divide-y divide-[#e9e9e9]">
+					<table className="table-auto w-full mt-6 divide-y divide-[#e9e9e9]">
 						<thead>
 							<tr className="[&_th]:py-4">
 								<th></th>
 								<th></th>
-								<th className="text-left">Products</th>
-								<th className="text-center">Price</th>
-								<th className="text-right">Quantity</th>
-								<th className="text-right">Total</th>
+								<th className="text-left">Sản phẩm</th>
+								<th className="text-center">Kích thước</th> {/* Thêm cột Kích thước */}
+								<th className="text-center">Giá</th>
+								<th className="text-right">Số Lượng</th>
+								<th className="text-right">Tổng</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -90,6 +90,7 @@ export default function Cart() {
 										/>
 									</td>
 									<td className="text-left">{item.name}</td>
+									<td className="text-center">{item.size}</td> {/* Hiển thị kích thước */}
 									<td className="text-sm text-center">
 										<Price value={item.price} />
 									</td>
@@ -123,42 +124,25 @@ export default function Cart() {
 							))}
 						</tbody>
 					</table>
-					<div className="flex flex-row mt-5 pt-5 border-t border-[#e9e9e9]">
-						<Input
-							placeholder="Coupon code"
-							size="large"
-							className="!w-[154px] border border-[#d3ced2]"
-						/>
-						<Button
-							type="primary"
-							size="large"
-							className="w-[154px]"
-						>
-							Apply Coupon
-						</Button>
-					</div>
 				</div>
 				<div className="grid col-span-1 p-6 bg-white shadow-md">
-					<div className="flex flex-col justify-between h-full``1">
+					<div className="flex flex-col justify-between h-full">
 						<div className="divide-y divide-[#e9e9e9]">
 							<div className="py-5">
-								<p className="font-semibold">Cart Totals</p>
+								<p className="font-semibold">Tất cả về giỏ hàng</p>
 							</div>
 							<div className="flex flex-row items-center justify-between py-6">
-								<p className="font-semibold">Subtotal</p>
+								<p className="font-semibold">Tất cả về giỏ hàng</p>
 								<Price value={totalPrice} />
 							</div>
 							<div className="py-5 space-y-4">
-								<div>
-									<p className="font-semibold">Shipping</p>
-								</div>
 								<div className="flex flex-row items-center justify-between ">
-									<p className="font-semibold">Flat rate:</p>
+									<p className="font-semibold">Phụ thu</p>
 									<p>$0</p>
 								</div>
 							</div>
 							<div className="flex flex-row items-center justify-between py-5">
-								<p className="font-semibold">Total</p>
+								<p className="font-semibold">Tổng :</p>
 								<Price value={totalPrice} />
 							</div>
 						</div>
@@ -168,7 +152,7 @@ export default function Cart() {
 								size="large"
 								className="w-full "
 							>
-								<p>Proceed To Checkout</p>
+								<p>Click để đặt hàng ngay !!</p>
 							</Button>
 						</Link>
 					</div>

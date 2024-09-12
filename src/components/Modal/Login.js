@@ -11,7 +11,7 @@ export default memo(function Login() {
 
 	const onFinish = (values) => {
 		dispatch(loginRequest(values));
-	};
+	};	
 
 	return (
 		<div>
@@ -23,8 +23,8 @@ export default memo(function Login() {
 				style={{ width: '100%' }}
 				scrollToFirstError
 				initialValues={{
-					email: 'user@iviettech.dev',
-					password: 'iviettech',
+					email: 'abc@gmail.com',
+					password: '123456',
 				}}
 			>	
 				<Form.Item
@@ -37,7 +37,7 @@ export default memo(function Login() {
 						},
 						{
 							required: true,
-							message: 'Please input your E-mail!',
+							message: 'Vui lòng nhập Email của bạn !',
 						},
 					]}
 				>
@@ -50,7 +50,7 @@ export default memo(function Login() {
 					rules={[
 						{
 							required: true,
-							message: 'Please input your password!',
+							message: 'Vui lòng nhập password của bạn !',
 						},
 					]}
 					hasFeedback
@@ -59,7 +59,7 @@ export default memo(function Login() {
 				</Form.Item>
 
 				<Button type="primary" htmlType="submit" loading={fetching}>
-					Login
+					Đăng nhập	
 				</Button>
 			</Form>
 		</div>

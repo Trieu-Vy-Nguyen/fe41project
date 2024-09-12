@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import persistReducer from 'redux-persist/es/persistReducer';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import storage from 'redux-persist/lib/storage'; 
 
 const initialState = {
 	user: null,
@@ -60,7 +60,7 @@ export const authSlice = createSlice({
 	},
 });
 
-// Action creators are generated for each case reducer function
+
 export const {
 	loginRequest,
 	loginSuccess,
@@ -77,8 +77,7 @@ export const {
 
 export const AUTH_PERSIST_KEY = 'authPersist';
 
-// Đoạn code này nhằm khai báo cho persist rằng chúng ta chỉ cần lưu token và user và persist,
-// những dữ liệu còn lại như fetching hay isShowAuthModal thì không cần lưu
+
 export const AuthReducer = persistReducer(
 	{
 		storage,

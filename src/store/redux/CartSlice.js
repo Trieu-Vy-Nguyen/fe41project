@@ -1,3 +1,4 @@
+// cartSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -10,46 +11,41 @@ export const cartSlice = createSlice({
 	initialState,
 	reducers: {
 		addProductToCart: (state, action) => {
-			const currentCart = [...state.carts];
-			const existingProductIndex = currentCart.findIndex(
-				(item) => item.id === action.payload.id
+			const { id, size, quantity } = action.payload;
+			const existingProduct = state.carts.find(
+				(item) => item.id === id && item.size === size
 			);
-			if (existingProductIndex !== -1) {
-				// Product already exists in the cart, update quantity
-				currentCart[existingProductIndex].quantity += 1;
-				state.carts = currentCart;
+
+			if (existingProduct) {
+				existingProduct.quantity += quantity; // Cập nhật số lượng
 			} else {
-				// Product doesn't exist in the cart, add it
-				state.carts = [
-					{ quantity: 1, ...action.payload },
-					...currentCart,
-				];
+				state.carts.push({
+					...action.payload,
+					quantity: quantity,
+				});
 			}
 		},
 		removeProductToCart: (state, action) => {
-			const currentCart = [...state.carts];
-			const existingProductIndex = currentCart.findIndex(
-				(item) => item.id === action.payload.id
+			const { id, size } = action.payload;
+			const existingProduct = state.carts.find(
+				(item) => item.id === id && item.size === size
 			);
-			if (existingProductIndex !== -1) {
-				if (currentCart[existingProductIndex].quantity === 1) {
-					state.carts = currentCart.filter(
-						(item) => item.id !== action.payload.id
+
+			if (existingProduct) {
+				if (existingProduct.quantity === 1) {
+					state.carts = state.carts.filter(
+						(item) => !(item.id === id && item.size === size)
 					);
 				} else {
-					currentCart[existingProductIndex].quantity -= 1;
-					state.carts = currentCart;
+					existingProduct.quantity -= 1;
 				}
 			}
 		},
 		removeAllProductToCart: (state, action) => {
-			const currentCart = [...state.carts];
-
-			const newCart = currentCart.filter(
-				(item) => item.id !== action.payload.id
+			const { id, size } = action.payload;
+			state.carts = state.carts.filter(
+				(item) => !(item.id === id && item.size === size)
 			);
-
-			state.carts = newCart;
 		},
 		resetCart: (state) => {
 			state.carts = [];
@@ -60,7 +56,6 @@ export const cartSlice = createSlice({
 	},
 });
 
-// Action creators are generated for each case reducer function
 export const {
 	addProductToCart,
 	removeProductToCart,

@@ -33,3 +33,8 @@ code {
 	color: inherit !important;
 	text-decoration: inherit !important;
 }
+
+.custom-shadow:hover {
+	box-shadow: 0 5px 10px 0 rgba(69, 79, 89, 0.15);
+	transition: box-shadow 0.3s ease-in-out;
+}

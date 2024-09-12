@@ -12,7 +12,7 @@ export default memo(function AuthSidebar() {
 							to={ROUTERS.PROFILE}
 							className={(active) => `${active && 'font-bold'} `}
 						>
-							Profile
+							Hồ sơ
 						</NavLink>
 					</div>
 					<div className="py-3">
@@ -20,7 +20,15 @@ export default memo(function AuthSidebar() {
 							to={ROUTERS.ORDER_HISTORY}
 							className={(active) => `${active && 'font-bold'} `}
 						>
-							Order History
+							Lịch sử đặt hàng
+						</NavLink>
+					</div>
+					<div className="py-3">
+						<NavLink
+							to={ROUTERS.PASSWORD}
+							className={(active) => `${active && 'font-bold'} `}
+						>
+							Đổi mật khẩu
 						</NavLink>
 					</div>
 				</div>

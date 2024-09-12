@@ -29,7 +29,7 @@ export default memo(function Register() {
 					rules={[
 						{
 							required: true,
-							message: 'Please input your first name',
+							message: 'Vui lòng nhập họ của bạn !',
 						},
 					]}
 				>
@@ -41,7 +41,7 @@ export default memo(function Register() {
 					rules={[
 						{
 							required: true,
-							message: 'Please input your last name',
+							message: 'Vui lòng nhập tên của bạn !',
 						},
 					]}
 				>
@@ -57,7 +57,7 @@ export default memo(function Register() {
 						},
 						{
 							required: true,
-							message: 'Please input your E-mail!',
+							message: 'Vui lòng nhập email của bạn !',
 						},
 					]}
 				>
@@ -69,7 +69,7 @@ export default memo(function Register() {
 					rules={[
 						{
 							required: true,
-							message: 'Please input your password!',
+							message: 'Vui lòng nhập password của bạn !',
 						},
 					]}
 					hasFeedback
@@ -84,7 +84,7 @@ export default memo(function Register() {
 					rules={[
 						{
 							required: true,
-							message: 'Please confirm your password!',
+							message: 'Vui lòng xác nhận password của bạn !',
 						},
 						({ getFieldValue }) => ({
 							validator(_, value) {
@@ -96,7 +96,7 @@ export default memo(function Register() {
 								}
 								return Promise.reject(
 									new Error(
-										'The new password that you entered do not match!'
+										'Password không khớp , bạn hãy kiểm tra lại !'
 									)
 								);
 							},
@@ -106,7 +106,7 @@ export default memo(function Register() {
 					<Input.Password size="large" />
 				</Form.Item>
 				<Button type="primary" htmlType="submit" loading={fetching}>
-					Register
+					Đăng ký
 				</Button>
 			</Form>
 		</div>

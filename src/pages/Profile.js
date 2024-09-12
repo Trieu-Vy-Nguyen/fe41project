@@ -17,7 +17,6 @@ export default function Profile() {
 
 	useEffect(() => {
 		if (!user) {
-			// Trang profile yêu cầu phải đăng nhập, nếu chưa đặt nhập mà di chuyển đến trang thì mở modal login để user đăng nhập
 			dispatch(setShowAuthModal(true));
 		}
 	}, [user]);
@@ -39,7 +38,7 @@ export default function Profile() {
 						>
 							<div>
 								<div className="pb-8">
-									<p className="text-3xl">Profile</p>
+									<p className="text-3xl">Hồ sơ</p>
 								</div>
 								<Form.Item
 									name="firstname"
@@ -62,13 +61,17 @@ export default function Profile() {
 								>
 									<Input />
 								</Form.Item>
+
+								
+							
+
 								<Button
 									type="primary"
 									htmlType="submit"
 									loading={isSubmitting}
 									className="w-full mt-5 "
 								>
-									Save
+									Lưu
 								</Button>
 							</div>
 						</Form>

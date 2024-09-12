@@ -20,7 +20,7 @@ export function* login(action) {
 		});
 		if (res.ok && res.status === 200) {
 			yield put(loginSuccess(res.data));
-			// Đóng modal login sau khi login thành công
+		
 			yield put(setShowAuthModal(false));
 		} else {
 			message.error(res.data);
@@ -42,9 +42,9 @@ export function* register(action) {
 		});
 		if (res.ok && res.status === 201) {
 			yield put(registerSuccess(res.data));
-			// Đóng modal đăng ký sau khi login thành công
+			
 			yield put(setShowAuthModal(false));
-			// Gửi email thông báo cho người dùng sau khi đăng ký tài khoản thành công
+			
 			sentRegisterSuccessEmail(action.payload);
 		} else {
 			message.error(res.data);

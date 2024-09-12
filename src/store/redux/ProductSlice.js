@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
 	products: [],
+	categories: [],
 	fetching: false,
 };
 
@@ -9,22 +10,22 @@ export const productSlice = createSlice({
 	name: 'product',
 	initialState,
 	reducers: {
-		getProductsRequest: (state, action) => {
+		getProductsRequest: (state) => {
 			state.fetching = true;
 		},
 		getProductsSuccess: (state, action) => {
-			state.products = action.payload;
+			state.products = action.payload.products;
+			state.categories = action.payload.categories;
 			state.fetching = false;
 		},
-		getProductsFailure: (state, action) => {
+		getProductsFailure: (state) => {
 			state.products = [];
+			state.categories = [];
 			state.fetching = false;
 		},
 	},
 });
 
-// Action creators are generated for each case reducer function
-export const { getProductsRequest, getProductsSuccess, getProductsFailure } =
-	productSlice.actions;
+export const { getProductsRequest, getProductsSuccess, getProductsFailure } = productSlice.actions;
 
 export default productSlice.reducer;

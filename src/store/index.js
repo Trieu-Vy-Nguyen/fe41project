@@ -16,7 +16,7 @@ import { persistConfig } from './persist';
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// create the saga middleware
+
 const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({

@@ -1,0 +1,380 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Arsenal Home 24-25 bản Player",
+      "image": "https://product.hstatic.net/200000580329/product/img_0231_80f71a71ce344c6ea9e0db932b6fa29f_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/img_0231_80f71a71ce344c6ea9e0db932b6fa29f_master.jpg",
+      "price": 200,
+      "categoryId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Real Maldrid home 24-25 bản Player",
+      "image": "https://product.hstatic.net/200000580329/product/img_0300_e2dbaa3318724388bad5f75f53e5714b_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/img_0304_32219d8421b347b88938850c77a7d25f_master.jpg",
+      "price": 150,
+      "categoryId": "1"
+    },
+    {
+      "id": "3",
+      "name": "Mu Home 24-25 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/img_0256_3900d7727bc64909ad6a01052a48e274_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/img_0256_3900d7727bc64909ad6a01052a48e274_master.jpg",
+      "price": 130,
+      "categoryId": "2"
+    },
+    {
+      "id": "4",
+      "name": "Man City Home 24-25 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/img_0285_ee4284061e004743bd6569662743ef30_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/img_0292_212b742c75bf4c97bc9bb7f489ec8514_master.jpg",
+      "price": 100,
+      "categoryId": "3"
+    },
+    {
+      "id": "5",
+      "name": "Mu Away 24-25 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/img_0273_e0afb71bac7249208a8675e75e1dec23_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/img_0276_72b3fcf8a1044c2199b2edee216d1304_master.jpg",
+      "price": 100,
+      "categoryId": "3"
+    },
+    {
+      "id": "6",
+      "name": "Bayern Home 24-25 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/img_0313_975c2a70f39b49b69a5a074b5a1e2965_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/img_0316_84412a3d8a814f6ab9f623df3aa1d3de_master.jpg",
+      "price": 80,
+      "categoryId": "3"
+    },
+    {
+      "id": "7",
+      "name": "LiverPool Home 24-25 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/img_0221_3840a8ec4a2a4902bef6603e064b531d_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/img_0227_0ba3cba0822449a18eb0e7dabbb869cc_master.jpg",
+      "price": 209,
+      "categoryId": "3"
+    },
+    {
+      "id": "8",
+      "name": "ChelSea Home 24-25 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/img_0239_92c70048bd944cdb9bb2d71e6c64dbd7_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/img_0243_a36c85fb1b854953b6ac8f6e96d4481e_master.jpg",
+      "price": 76,
+      "categoryId": "3"
+    },
+    {
+      "id": "9",
+      "name": "Tuyển Ý Home 2024 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/vh_08665_95a921f2ca0548269c1335ecc9a50159_large.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/vh_08665_95a921f2ca0548269c1335ecc9a50159_large.jpg",
+      "price": 100,
+      "categoryId": "4"
+    },
+    {
+      "id": "10",
+      "name": "Tuyển Pháp Home 2024 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/vh_08626_c2aaf5e8f3d14247850e0b29e52ac742_large.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/vh_08626_c2aaf5e8f3d14247850e0b29e52ac742_large.jpg",
+      "price": 80,
+      "categoryId": "4"
+    },
+    {
+      "id": "11",
+      "name": "Tuyển Bồ Đào Nha Home 2024 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/vh_08616_04c632e41fa24ba2bb52e829b0b14a65_large.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/vh_08616_04c632e41fa24ba2bb52e829b0b14a65_large.jpg",
+      "price": 50,
+      "categoryId": "4"
+    },
+    {
+      "id": "12",
+      "name": "Tuyển Argentina Home 2024 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/vh_08593_0d638be99d5e4f2797bb91e4d9968459_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/vh_08593_0d638be99d5e4f2797bb91e4d9968459_master.jpg",
+      "price": 50,
+      "categoryId": "4"
+    },
+    {
+      "id": "13",
+      "name": "Tuyển Đức Away 2024 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/vh_08576_19cc5b861e224b648167ec0d23461dfb_large.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/vh_08576_19cc5b861e224b648167ec0d23461dfb_large.jpg",
+      "price": 90,
+      "categoryId": "5"
+    },
+    {
+      "id": "14",
+      "name": "Tuyển Bồ Đào Nha Away 2024 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/vh_08560_7090391d331140f481cd61fe636234a6_large.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/vh_08560_7090391d331140f481cd61fe636234a6_large.jpg",
+      "price": 90,
+      "categoryId": "5"
+    },
+    {
+      "id": "15",
+      "name": "Tuyển Anh Home 2024 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/vh_08541_5add954d07e74eed80250cb1b1fcf432_large.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/vh_08541_5add954d07e74eed80250cb1b1fcf432_large.jpg",
+      "price": 50,
+      "categoryId": "5"
+    },
+    {
+      "id": "16",
+      "name": "Tây Ban Nha Home 2024 bản Player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/vh_08528_da2bbbb8576a4a65ba6f016cd5efe62d_large.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/vh_08528_da2bbbb8576a4a65ba6f016cd5efe62d_large.jpg",
+      "price": 50,
+      "categoryId": "5"
+    },
+    {
+      "id": "17",
+      "name": "T1 Hoodie 2023",
+      "image": "https://product.hstatic.net/200000580329/product/skaa7570_2dbd969863d8472794ddecaef54194b9_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/skaa7577_8e4cfb57b7814f5d99669c2c0119ce19_master.jpg",
+      "price": 50,
+      "categoryId": "5"
+    },
+    {
+      "id": "18",
+      "name": "Al Nassr Home 23-24 bản player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/skaa7602_747762ab747c477bb9fb9218a5a3ab35_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/skaa7604_d9cfa2d94a764f2aaa23d51b74ada510_master.jpg",
+      "price": 50,
+      "categoryId": "5"
+    },
+    {
+      "id": "19",
+      "name": "Tuyển Đức Home 2024 bản player full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/vh_08641_df5d85fa05964cf8a3baebda12118a0c_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/vh_08653_637f725d61a24de292161c4f078fde2c_master.jpg",
+      "price": 50,
+      "categoryId": "5"
+    },
+    {
+      "id": "20",
+      "name": "Real Maldrid 3rd 23-24 bản Player Full bộ",
+      "image": "https://product.hstatic.net/200000580329/product/skaa7598_13e9a74d21864d9a9e82438fa15f3e5c_master.jpg",
+      "imageHover": "https://product.hstatic.net/200000580329/product/skaa7598_13e9a74d21864d9a9e82438fa15f3e5c_master.jpg",
+      "price": 50,
+      "categoryId": "5"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Shirt"
+    },
+    {
+      "id": "2",
+      "name": "Pant"
+    },
+    {
+      "id": "3",
+      "name": "Accessory"
+    },
+    {
+      "id": "4",
+      "name": "Collaboration"
+    },
+    {
+      "id": "5",
+      "name": "Sale"
+    }
+  ],
+  "orders": [
+    {
+      "fullName": "Nguyen Trieu Vy",
+      "address": "abc",
+      "city": "Da Nang",
+      "country": "Việt Nam",
+      "phone": "12345678",
+      "email": "trieuvy.it+1@gmail.com",
+      "userId": 3,
+      "status": "PENDING",
+      "orderDate": "2024-04-08T07:44:31.606Z",
+      "price": 350,
+      "id": 2
+    },
+    {
+      "fullName": "Nguyen Trieu Vy",
+      "address": "abc",
+      "city": "Da Nang",
+      "country": "Việt Nam",
+      "phone": "12345678",
+      "email": "vinguyen090802@gmail.com",
+      "userId": 3,
+      "status": "PENDING",
+      "orderDate": "2024-04-25T07:28:51.959Z",
+      "price": 2800,
+      "id": 3
+    },
+    {
+      "fullName": "Nguyen Trieu Vy",
+      "address": "abc",
+      "city": "Da Nang",
+      "country": "Việt Nam",
+      "phone": "12345678",
+      "email": "vinguyen090802@gmail.com",
+      "userId": 7,
+      "status": "PENDING",
+      "orderDate": "2024-04-25T07:49:49.697Z",
+      "price": 1627,
+      "id": 4
+    }
+  ],
+  "orderDetails": [
+    {
+      "orderId": 2,
+      "product": {
+        "quantity": 1,
+        "id": "1",
+        "name": "2024 T1 Uniform Jacket",
+        "image": "https://shop-t1-na.gg/cdn/shop/files/2024-t1-uniform-jacket_400x.jpg?v=1708469337",
+        "imageHover": "https://shop-t1-na.gg/cdn/shop/files/2024-t1-uniform-jacket_400x.jpg?v=1708469337",
+        "price": 200,
+        "categoryId": "1"
+      },
+      "quantity": 1,
+      "price": 200,
+      "id": 2
+    },
+    {
+      "orderId": 3,
+      "product": {
+        "quantity": 14,
+        "id": "1",
+        "name": "2024 T1 Uniform Jacket",
+        "image": "https://shop-t1-na.gg/cdn/shop/files/2024-t1-uniform-jacket_400x.jpg?v=1708469337",
+        "imageHover": "https://shop-t1-na.gg/cdn/shop/files/2024-t1-uniform-jacket_400x.jpg?v=1708469337",
+        "price": 200,
+        "categoryId": "1"
+      },
+      "quantity": 14,
+      "price": 200,
+      "id": 3
+    },
+    {
+      "orderId": 4,
+      "product": {
+        "quantity": 3,
+        "id": "7",
+        "name": "[T1 X MASTERCARD] Derby Bag",
+        "image": "https://shop-t1-na.gg/cdn/shop/files/T1XMASTERCARD_DERBYBAG_400x.jpg?v=1700615745",
+        "imageHover": "https://shop-t1-na.gg/cdn/shop/files/oner2_400x.jpg?v=1700615816",
+        "price": 209,
+        "categoryId": "3"
+      },
+      "quantity": 3,
+      "price": 209,
+      "id": 4
+    },
+    {
+      "orderId": 4,
+      "product": {
+        "quantity": 5,
+        "id": "1",
+        "name": "2024 T1 Uniform Jacket",
+        "image": "https://shop-t1-na.gg/cdn/shop/files/2024-t1-uniform-jacket_400x.jpg?v=1708469337",
+        "imageHover": "https://shop-t1-na.gg/cdn/shop/files/2024-t1-uniform-jacket_400x.jpg?v=1708469337",
+        "price": 200,
+        "categoryId": "1"
+      },
+      "quantity": 5,
+      "price": 200,
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "trieuvy.it@gmail.com",
+      "password": "vynguyendev1",
+      "id": 1
+    },
+    {
+      "email": "trieuvy.it+1@gmail.com",
+      "password": "vynguyendev2",
+      "firstname": "Vy",
+      "lastname": "Nguyen",
+      "id": 2
+    },
+    {
+      "email": "user@iviettech",
+      "password": "$2a$10$U63Iu5yk1R4tkV8YSUeYK.MBMZDy2.8TviXWgTxbYaPYQYxC0GwJW",
+      "firstname": "Vy",
+      "lastname": "Nguyen",
+      "id": 3
+    },
+    {
+      "email": "vinguyen090802@gmail.com",
+      "password": "$2a$10$J1IKhF.wGbryDYWXzJypyOrRNH8kUa6yG/oJLu1w33AJNI83ggEJ2",
+      "firstname": "Sau",
+      "lastname": "Nguyen",
+      "id": 4
+    },
+    {
+      "email": "user@iviettech.dev",
+      "password": "$2a$10$RqimMwBQcfdT.PF6HU2IJepV154L4I8JTcpdTM0yTmjFKMdrTtx1S",
+      "firstname": "Trieu",
+      "lastname": "Vy",
+      "id": 5
+    },
+    {
+      "email": "abc@iviettech.dev",
+      "password": "$2a$10$Stdh4KV4DvG3/dwYEj7P1OGcckHllEhmhyvYzep1ArZMGaRtoNEbC",
+      "firstname": "Trieu",
+      "lastname": "Vy",
+      "id": 6
+    },
+    {
+      "email": "admin@admin.com",
+      "password": "$2a$10$LUwdKW8wi/OaD5Min1xbR.XOyjk/JroqDscEkLD9xBAWh3vwL8b1C",
+      "firstname": "Trieeu",
+      "lastname": "Vy",
+      "id": 7
+    },
+    {
+      "email": "iviettech@gmail.com",
+      "password": "$2a$10$AHHRhjI9Ddseh4Aok8LMbeTx57VCMTzYAwW8Vk.EeLgMoFgxAn1K2",
+      "firstname": "Sau",
+      "lastname": "Nguyen",
+      "id": 8
+    },
+    {
+      "email": "iviettechh@gmail.com",
+      "password": "$2a$10$10VcncneeseQIkILcpNiWu.sAz3YE/wxAgfAQXZd87e/eqj1hrWly",
+      "firstname": "Sau",
+      "lastname": "Nguyen",
+      "id": 9
+    },
+    {
+      "email": "iviettechhh@gmail.com",
+      "password": "$2a$10$nmVBCsp4tdUg8OXiSGvkgOpZSPe3QPH81yFUgHW2.7rSb4ZsLmxWa",
+      "firstname": "Saua",
+      "lastname": "Nguyen",
+      "id": 10
+    },
+    {
+      "email": "iviettechhhh@gmail.com",
+      "password": "$2a$10$N.Q6ZVya15yx8Th2V/NfP.eU0S4tFK4UCAAMoReGuRkbzJoBj736K",
+      "firstname": "Sau",
+      "lastname": "Nguyen",
+      "id": 11
+    },
+    {
+      "email": "iiviettechhhh@gmail.com",
+      "password": "$2a$10$zHEyFfYxOKlo9CuZP2ku..eA6akd/cfbSexDtyXlDdfe9Y0pSkZQa",
+      "firstname": "Vyyy",
+      "lastname": "Nguyen",
+      "id": 12
+    },
+    {
+      "email": "iiviettechhhhh@gmail.com",
+      "password": "$2a$10$RnM0FxrOs4bw3b5ThBQw9e93ZL/zrcrso3psubh7NQXu5OyX9RCo6",
+      "firstname": "Vyyyyy",
+      "lastname": "Nguyen",
+      "id": 13
+    }
+  ]
+}

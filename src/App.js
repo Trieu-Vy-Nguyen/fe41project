@@ -19,6 +19,9 @@ import { ROUTERS } from './constants/Routers';
 import Profile from './pages/Profile';	
 import About from './pages/About';
 import Contact from './pages/Contact';
+import SuccessPage from './pages/SuccessPage';
+import CardPayment from './pages/CardPayment';
+import Password from './pages/Password';
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<Layout />}>
@@ -31,6 +34,9 @@ const router = createBrowserRouter(
 			<Route path={ROUTERS.ORDER_HISTORY} element={<OrderHistory />} />
 			<Route path={ROUTERS.ABOUT} element={<About />} />
 			<Route path={ROUTERS.CONTACT} element={<Contact />} />
+			<Route path={ROUTERS.SUCCESS} element={<SuccessPage />} />
+			<Route path={ROUTERS.CARDPAYMENT} element={<CardPayment />} />
+			<Route path={ROUTERS.PASSWORD} element={<Password />} />
 		</Route>
 	)
 );

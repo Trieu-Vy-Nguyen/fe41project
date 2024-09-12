@@ -6,10 +6,8 @@ import ProductLoading from './ProductLoading';
 import ProductItem from './ProductItem';
 import { ROUTERS } from '../constants/Routers';
 
-
 function List() {
-	
-	const { products, fetching } = useSelector((state) => state.product);
+	const { products, categories, fetching } = useSelector((state) => state.product);
 	const dispatch = useDispatch();
 
 	const getProducts = () => {
@@ -18,40 +16,57 @@ function List() {
 
 	useEffect(() => {
 		getProducts();
-	}, []);
+	}, [dispatch]);
 
+	// Lọc và phân loại sản phẩm theo danh mục
+	const categorizedProducts = categories.map(category => {
+		const filteredProducts = products.filter(product => product.categoryId === category.id);
+		return {
+			...category,
+			products: filteredProducts.slice(0, 8), // Chỉ lấy 8 sản phẩm đầu tiên
+		};
+	});
+
+	console.log(categorizedProducts, "category.products");
+	
 
 	return (
-		<div className="container py-10 mx-auto">
-		<div className="card">
-			<div className="mb-6 text-center">
-				<h2 className="text-3xl"> PRODUCT</h2>
-				<h4 className="mt-4">
-					Base optimal relaxation unlock my. Asserts too invite
-					web cause eow can breakout ocean create.
-				</h4>
-			</div>
-
-			{fetching ? (
-				<ProductLoading />
-			) : (
-				<div className="grid grid-cols-1 gap-5 md:grid-cols-4">
-					{products.map((item) => (
-						<ProductItem item={item} key={item.id} />
-					))}
+		<div className="container py-10 mx-auto max-w-[1200px]">
+			<div className="card">
+				<div className="mb-6 text-center">
+					<h2 className="text-3xl text-red-400">Danh Mục Sản Phẩm</h2>
 				</div>
-			)}
-		</div>
-		<div className='flex justify-center mt-10'>
-			<button className='px-20 py-5 bg-black text-white hover:text-blue-500'>
-				<Link to={ROUTERS.PRODUCTS}> VIEW MORE </Link>
-			</button>
-		</div>
-	</div>
 
+				{fetching ? (
+					<ProductLoading />
+				) : (
+					<>
+						{categorizedProducts.map((category, index) => (
+							<div key={category.id} className='text-center'>
+								<h3 className="text-2xl font-semibold mb-4">{category.name}</h3>
+								<div className="grid grid-cols-1 gap-5 md:grid-cols-4">
+									{category.products.map((item) => (
+										<ProductItem item={item} key={item.id} />
+									))}
+								</div>
+								{/* Separator line */}
+								{index < categorizedProducts.length - 1 && (
+									<hr className="my-8 border-t-4 border-gray-300 w-full" />
+								)}
+							</div>
+						))}
 
+					</>
+				)}
+			</div>
+			<div className='flex justify-center mt-10'>
+				<button className='px-40 py-5 bg-white text-black hover:text-blue-500 border border-black'>
+					<Link className='text-lg font-extrabold' to={ROUTERS.PRODUCTS}>Xem Thêm Đi, Còn Nhiều Lắm !! </Link>
+				</button>
+			</div>
+		</div>
 	);
-
 }
+
 
 export default List;

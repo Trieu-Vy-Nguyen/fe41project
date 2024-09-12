@@ -3,8 +3,9 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import { App } from 'antd';
 import Banner1 from './Banner1';
-import Banner2 from './Banner2';
+
 import Footer from './Footer';
+import Feedback from './Feedback';
 
 
 
@@ -23,8 +24,8 @@ export default function Layout() {
 		<div className="min-h-screen">
 			<Header />
 			<Banner1 />
-			<Banner2 />
 			<Outlet />
+			<Feedback />
 			<Footer />
 		</div>
 	);
