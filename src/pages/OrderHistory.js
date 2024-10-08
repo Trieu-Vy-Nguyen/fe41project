@@ -19,18 +19,12 @@ export default function OrderHistory() {
 
     const getOrders = async () => {
         setFetching(true);
-        try {
-            const res = await ServiceApi.getOrders({
-                _embed: 'orderDetails',
-                ...insertObjectIf(user, { userId: user.id }),
-            });
-            if (res.ok) {
-                setOrders(res.data);
-            } else {
-                message.error('Lấy danh sách đơn hàng không thành công');
-            }
-        } catch (error) {
-            message.error('Lỗi khi lấy danh sách đơn hàng');
+        const res = await ServiceApi.getOrders({
+            _embed: 'orderDetails',
+            ...insertObjectIf(user, { userId: user.id }),
+        });
+        if (res.ok) {
+            setOrders(res.data);
         }
         setFetching(false);
     };
@@ -45,53 +39,52 @@ export default function OrderHistory() {
 
     const onDelete = async (id) => {
         modal.confirm({
-            title: "Xóa phần giao dịch này",
-            description: "Bạn chắc chắn muốn xóa nó chứ?",
+            title: 'Xóa phần giao dịch này',
+            description: 'Bạn chắc chắn muốn xóa nó chứ?',
             onOk: async () => {
-                try {
-                    await ServiceApi.deleteOrders(id);
-                    await getOrders();
-                    message.success('Xóa đơn hàng thành công');
-                } catch (error) {
-                    message.error('Lỗi khi xóa đơn hàng');
-                }
+                await ServiceApi.deleteOrders(id);
+                await getOrders();
+                message.success('Xóa thành công !!');
             },
-            okText: "Có",
-            cancelText: "Không",
+            okText: 'Có',
+            cancelText: 'Không',
         });
     };
 
     const columns = [
-        { title: 'Code', dataIndex: 'id', key: 'id' },
         Table.EXPAND_COLUMN,
         {
-            title: 'Lịch sử đặt hàng',
+            title: 'Thông tin khách hàng',
             render: (text, record) => (
                 <div className="flex flex-col">
                     <p className="text-xs">{record.fullName}</p>
                     <p className="text-xs">
-                        {[
-                            record.phone,
-                            record.email,
-                            record.address,
-                            record.city,
-                            record.province, // Changed to province
-                        ].join(', ')}
+                        {[record.phone, record.email, record.address, record.city, record.country].join(', ')}
                     </p>
                 </div>
             ),
         },
         {
-            title: 'Số tiền',
+            title: 'Giá',
             dataIndex: 'price',
             key: 'price',
             render: (value) => <Price value={value} />,
         },
         {
-            title: 'Ngày đặt hàng',
+            title: 'Phương thức thanh toán',
+            dataIndex: 'paymentMethod',
+            key: 'paymentMethod',
+            render: (method) => (
+                <span>
+                    {method === 'cod' ? 'Thanh toán khi nhận hàng' : 'Thanh toán qua QR Code'}
+                </span>
+            ),
+        },
+        {
+            title: 'Ngày Đặt Hàng',
             dataIndex: 'orderDate',
             key: 'orderDate',
-            render: (value) => moment(value).format('YYYY.MM.DD HH:mm'),
+            render: (value) => moment(value).format('YYYY.MM.DD hh:mm'),
         },
         {
             title: 'Công cụ',
@@ -121,34 +114,30 @@ export default function OrderHistory() {
                                         <thead>
                                             <tr className="[&_th]:py-2">
                                                 <th></th>
-                                                <th className="text-left">Sản phẩm</th>
-                                                <th className="text-center">Tiền</th>
+                                                <th className="text-left">Sản Phẩm</th>
+                                                <th className="text-center">Giá</th>
+                                                <th className="text-center">Size</th>
                                                 <th className="text-center">Số lượng</th>
                                                 <th className="text-right">Tổng</th>
-                                                <th className="text-center">Size</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {record.orderDetails.map((item) => (
                                                 <tr key={item.id} className="[&_td]:pt-2">
                                                     <td>
-                                                        <Image
-                                                            src={item.product.image}
-                                                            width={60}
-                                                            height={60}
-                                                        />
+                                                        <Image src={item.product.image} width={60} height={60} />
                                                     </td>
                                                     <td className="text-left">{item.product.name}</td>
                                                     <td className="text-sm text-center">
                                                         <Price value={item.price} />
                                                     </td>
+                                                    <td className="text-center">{item.product.size}</td>
                                                     <td>
                                                         <p className="text-center w-full">{item.quantity}</p>
                                                     </td>
                                                     <td className="text-sm text-right">
                                                         <Price value={item.quantity * item.price} />
                                                     </td>
-                                                    <td className="text-center">{item.product.size}</td> {/* Added Size Column */}
                                                 </tr>
                                             ))}
                                         </tbody>

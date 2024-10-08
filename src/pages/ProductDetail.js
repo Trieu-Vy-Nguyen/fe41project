@@ -13,14 +13,14 @@ function ProductDetail() {
 
 	useEffect(() => {
 		// Lấy thông tin chi tiết sản phẩm dựa trên id
-		fetch(`${process.env.REACT_APP_API_URL}/products/${id}`)
-			.then((response) => response.json())
-			.then((data) => setProduct(data))
-			.catch((error) => console.error('Lỗi khi lấy chi tiết sản phẩm:', error));
+		fetch(`${process.env.REACT_APP_API_URL}/products/${id}`)  //  Sử dụng biến môi trường để lấy URL của API và chèn id vào để tạo URL đầy đủ.
+			.then((response) => response.json()) // Chuyển đổi phản hồi từ API thành định dạng JSON
+			.then((data) => setProduct(data)) // Nếu thành công, cập nhật trạng thái product với dữ liệu sản phẩm nhận được.
+			.catch((error) => console.error('Lỗi khi lấy chi tiết sản phẩm:', error)); // Nếu có lỗi xảy ra trong quá trình gọi API, in thông báo lỗi ra console.
 	}, [id]);
 
 	const handleQuantityChange = (change) => {
-		setQuantity(prevQuantity => Math.max(prevQuantity + change, 1)); // Không cho phép số lượng nhỏ hơn 1
+		setQuantity(prevQuantity => Math.max(prevQuantity + change, 1)); //  Cập nhật số lượng sản phẩm. Sử dụng Math.max để đảm bảo số lượng không nhỏ hơn 1 (tránh số âm).
 	};
 
 	const handleSizeSelect = (size) => {
@@ -29,7 +29,7 @@ function ProductDetail() {
 
 	const handleAddToCart = () => {
 		if (product && selectedSize) { // Đảm bảo có sản phẩm và kích thước được chọn
-			const productToAdd = {
+			const productToAdd = { // Tạo đối tượng productToAdd để chứa thông tin sản phẩm cần thêm, bao gồm quantity và size.
 				...product,
 				quantity: quantity,
 				size: selectedSize

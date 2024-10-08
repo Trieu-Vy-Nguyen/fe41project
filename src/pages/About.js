@@ -1,58 +1,58 @@
 import React from 'react';
 
-
 const About = () => {
     return (
         <div className="w-[50%] mx-auto">
-            <h1 className='text-center text-2xl mt-10'>FAQ</h1>
+            <h1 className='text-center text-2xl mt-10'>CÂU HỎI THƯỜNG GẶP</h1>
             <div>
-                <h3 className='text-start text-xl font-semibold mt-10'>How do I place an order?</h3>
-                <p className='text-start text-lg mt-10'>Select the product you wish to purchase.
-                    Select the desired size and click ADD TO CART. Continue shopping if you wish to purchase
-                    more items. When finished shopping, double check your cart information (i.e. size, quantity, address)
-                    and click CHECKOUT. Follow the instructions for payment and delivery.</p>
+                <h3 className='text-start text-xl font-semibold mt-10'>Làm thế nào để đặt hàng?</h3>
+                <p className='text-start text-lg mt-10'>Chọn sản phẩm bạn muốn mua. 
+                    Chọn kích thước mong muốn và nhấn THÊM VÀO GIỎ HÀNG. Tiếp tục mua sắm nếu bạn muốn mua thêm sản phẩm. 
+                    Khi đã hoàn thành việc mua sắm, kiểm tra kỹ lại thông tin giỏ hàng của bạn (ví dụ: kích thước, số lượng, địa chỉ) và nhấn THANH TOÁN. 
+                    Làm theo hướng dẫn để thanh toán và giao hàng.</p>
             </div>
             <div>
-                <h3 className='text-start text-xl font-semibold mt-10'>What forms of payment do you accept?</h3>
-                <p className='text-start text-lg mt-10'>We accept all major credit/debit cards.</p>
+                <h3 className='text-start text-xl font-semibold mt-10'>Bạn chấp nhận những hình thức thanh toán nào?</h3>
+                <p className='text-start text-lg mt-10'>Chúng tôi chấp nhận tất cả các thẻ tín dụng/thẻ ghi nợ chính.</p>
             </div>
             <div>
-                <h3 className='text-start text-xl font-semibold mt-10'>Do you ship worldwide?</h3>
-                <p className='text-start text-lg mt-10'>Yes, all countries can be shipped. But due to COVID-19, shipping is being delayed and limited to some countries.
+                <h3 className='text-start text-xl font-semibold mt-10'>Bạn có giao hàng toàn cầu không?</h3>
+                <p className='text-start text-lg mt-10'>Có, chúng tôi giao hàng tới tất cả các quốc gia. Tuy nhiên, do tình hình COVID-19, việc vận chuyển đang bị trì hoãn và hạn chế đối với một số quốc gia.
 
-                    Asia:
-                    Macao, China, Lao People's Dem Rep, Bangladesh, Malaysia, Vietnam, Brunei, Singapore, Japan, Darussalam, Cambodia, Thailand, Maldives, Mongolia, Bahrain, Bhutan, United Arab Emirates, India, Indonesia, Philippines, Oman, Jordan, Israel, Qatar, Kuwait, Pakistan, Nepal, East Timor, Lebanon, Bangladesh, Saudi Arabia, Sri Lanka, Afghanistan, Uzbekistan, Iraq, Kazakhstan, Kyrgyzstan, Tajikistan, Taiwan, Hongkong, Republic of Korea
+                    Châu Á:
+                    Macao, Trung Quốc, Cộng hòa Dân chủ Nhân dân Lào, Bangladesh, Malaysia, Việt Nam, Brunei, Singapore, Nhật Bản, Darussalam, Campuchia, Thái Lan, Maldives, Mông Cổ, Bahrain, Bhutan, Các Tiểu vương quốc Ả Rập Thống nhất, Ấn Độ, Indonesia, Philippines, Oman, Jordan, Israel, Qatar, Kuwait, Pakistan, Nepal, Đông Timor, Lebanon, Bangladesh, Ả Rập Saudi, Sri Lanka, Afghanistan, Uzbekistan, Iraq, Kazakhstan, Kyrgyzstan, Tajikistan, Đài Loan, Hongkong, Hàn Quốc
 
-                    Europe:
-                    Albania, Armeni, Austria, Azerbaijan, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Georgia, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Lithuania, Luxemburg, Macedonia, Malta, Moldova, Monaco, Netherlands, Norway, Poland, Portugal, Republic of Montenegro, Romania, Russia, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, United Kingdom, Vatican City
+                    Châu Âu:
+                    Albania, Armenia, Áo, Azerbaijan, Belarus, Bỉ, Bosnia và Herzegovina, Bulgaria, Croatia, Síp, Cộng hòa Séc, Đan Mạch, Estonia, Phần Lan, Pháp, Georgia, Đức, Hy Lạp, Hungary, Iceland, Ireland, Ý, Latvia, Lithuania, Luxemburg, Macedonia, Malta, Moldova, Monaco, Hà Lan, Na Uy, Ba Lan, Bồ Đào Nha, Cộng hòa Montenegro, Romania, Nga, San Marino, Serbia, Slovakia, Slovenia, Tây Ban Nha, Thụy Điển, Thụy Sĩ, Vương quốc Anh, Thành Vatican
 
-                    North America:
-                    Canada, Greenland, United States
+                    Bắc Mỹ:
+                    Canada, Greenland, Hoa Kỳ
                 </p>
             </div>
             <div>
-                <h3 className='text-start text-xl font-semibold mt-10'>How much is international shipping?</h3>
+                <h3 className='text-start text-xl font-semibold mt-10'>Chi phí vận chuyển quốc tế là bao nhiêu?</h3>
                 <p className='text-start text-lg mt-10'>
-                    This varies on the destination and shipping kind (regular/express). You can view the shipping and handling fee after CHECKOUT and before submitting your payment.
+                    Chi phí này phụ thuộc vào điểm đến và loại hình vận chuyển (thường/nhanh). Bạn có thể xem phí vận chuyển và xử lý sau khi chọn THANH TOÁN và trước khi hoàn tất thanh toán.
 
-                    BUT customers in some countries may need to pay extra tariffs. If customers refuse to pay tariff and wish for a refund, please note that 'Shipping Fee' will not be refunded.</p>
-            </div>
-            <div>
-                <h3 className='text-start text-xl font-semibold mt-10'>How long will it take for my order to arrive?</h3>
-                <p className='text-start text-lg mt-10'>
-                    Please allow 1-2 days of handling in addition to shipping time estimate. For all orders in the USA, we estimate the delivery time to be 3-5 business days. International orders can take 14-21 business days depending on the country.
+                    Tuy nhiên, khách hàng ở một số quốc gia có thể phải trả thêm thuế nhập khẩu. Nếu khách hàng từ chối trả thuế nhập khẩu và muốn hoàn tiền, xin lưu ý rằng "Phí vận chuyển" sẽ không được hoàn lại.
                 </p>
             </div>
             <div>
-                <h3 className='text-start text-xl font-semibold mt-10'>Do you accept returns and/or exchanges?</h3>
+                <h3 className='text-start text-xl font-semibold mt-10'>Đơn hàng của tôi sẽ mất bao lâu để đến nơi?</h3>
                 <p className='text-start text-lg mt-10'>
-                Yes, please view the Returns & Exchange Policy link.
+                    Vui lòng đợi 1-2 ngày để xử lý đơn hàng trước khi tính thời gian vận chuyển. Đối với tất cả đơn hàng tại Hoa Kỳ, thời gian giao hàng ước tính là 3-5 ngày làm việc. Đơn hàng quốc tế có thể mất từ 14-21 ngày làm việc tùy thuộc vào quốc gia.
                 </p>
             </div>
             <div>
-                <h3 className='text-start text-xl font-semibold mt-10'>How do I wash the clothes?</h3>
+                <h3 className='text-start text-xl font-semibold mt-10'>Bạn có chấp nhận trả hàng và/hoặc đổi hàng không?</h3>
                 <p className='text-start text-lg mt-10'>
-                A general rule that is safe to follow for all of our apparel is to flip the clothes inside out and machine wash cold. Tumble dry low or hang dry.
+                Có, vui lòng xem liên kết Chính sách Đổi Trả.
+                </p>
+            </div>
+            <div>
+                <h3 className='text-start text-xl font-semibold mt-10'>Tôi nên giặt quần áo như thế nào?</h3>
+                <p className='text-start text-lg mt-10'>
+                Quy tắc chung an toàn cho tất cả các loại quần áo của chúng tôi là lộn ngược quần áo và giặt máy bằng nước lạnh. Sấy khô ở nhiệt độ thấp hoặc phơi khô.
                 </p>
             </div>
         </div>

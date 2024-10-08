@@ -9,7 +9,7 @@ function ProductSidebar() {
     const categorySelected = searchParams.get('categoryId');
 
     function handleFilterProductByCategory(value) {
-        setSearchParams((prevParams) => {
+        setSearchParams(prevParams => {
             if (!value) {
                 prevParams.delete('categoryId');
             } else {
@@ -39,7 +39,7 @@ function ProductSidebar() {
     return (
         <div className="sticky top-0 flex flex-col flex-1 space-y-6">
             <div>
-                <p className="text-xs">Home / Shop</p>
+                <p className="text-xs">Trang chủ / Cửa hàng</p>
             </div>
             <div>
                 <p className="mb-4 font-semibold">Danh mục</p>

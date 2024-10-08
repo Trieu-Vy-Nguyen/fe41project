@@ -1,13 +1,21 @@
+import emailjs from '@emailjs/browser';
 
-const EMAIL_SERVICE_ID = 'service_o9xzkin';
-const EMAIL_TEMPLATE_ID_1 = 'template_nmp6tew';
-const EMAIL_TEMPLATE_ID_2 = 'template_45r2wr1';
-const EMAIL_PUBLIC_KEY = 'rmmm_AWYPrBXmj97f';
+export const sentOrderSuccessEmail = async ({ email, name }) => {
+    try {
+        const serviceId = 'service_xnl1yug';
+        const templateId = 'template_scw7i8m';
+        const publicKey = 'FvWHXascOz1UHEdje';
 
-export const sentRegisterSuccessEmail = (data) => {
-	
-};
+        const templateParams = {
+			from_name: 'NghienBongDa',
+			from_email: email,
+			to_name: name,
+			message: 'Cảm ơn bạn đã đặt hàng ! Chúng tôi sẽ liên hệ với bạn trong khoản thời gian sớm nhất để có thể giao hàng ! Chúc bạn nhiều may mắn trong thời gian sắp tới ! Trân Trọng.',
+		};
 
-export const sentOrderSuccessEmail = (data) => {
-	
+        const response = await emailjs.send(serviceId, templateId, templateParams, publicKey); // Gọi phương thức send của EmailJS để gửi email. Hàm này trả về một promise và chúng ta sử dụng await để chờ kết quả.
+        console.log('Email sent successfully!', response);
+    } catch (error) {
+        console.error('Error sending email:', error);
+    }
 };

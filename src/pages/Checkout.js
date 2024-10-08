@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetCart, setBillDetails } from '../store/redux/CartSlice';
 import { Button, Form, Input, message, Radio } from 'antd';
@@ -12,12 +12,14 @@ import { ROUTERS } from '../constants/Routers';
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState('cod'); // Thêm trạng thái phương thức thanh toán
-  const carts = useSelector((state) => state.cart.carts);
-  const user = useSelector((state) => state.auth.user);
-  const billDetails = useSelector((state) => state.cart.billDetails);
+  const [isSubmitting, setIsSubmitting] = useState(false); 
+  const [paymentMethod, setPaymentMethod] = useState('cod'); 
+  const carts = useSelector((state) => state.cart.carts); 
+  const user = useSelector((state) => state.auth.user); 
+  const billDetails = useSelector((state) => state.cart.billDetails); 
   const dispatch = useDispatch();
+  const [form] = Form.useForm();
+
   const calculateTotal = () => {
     return carts.reduce(
       (total, item) => total + item.quantity * item.price,
@@ -26,22 +28,19 @@ export default function Checkout() {
   };
   const totalPrice = calculateTotal();
 
-  const [form] = Form.useForm();
-
   const onFinish = async (values) => {
     if (!user) {
       dispatch(setShowAuthModal(true));
       return;
     }
-  
+
     setIsSubmitting(true);
     try {
       if (paymentMethod === 'card') {
-        // Pass form values to CardPayment page
         navigate(ROUTERS.CARDPAYMENT, { state: { ...values, totalPrice } });
         return;
       }
-  
+
       const resOrder = await ServiceApi.createOrder({
         ...values,
         userId: user.id,
@@ -49,7 +48,7 @@ export default function Checkout() {
         orderDate: new Date().toISOString(),
         price: totalPrice,
       });
-  
+
       if (resOrder.ok) {
         dispatch(setBillDetails(values));
         await Promise.all(
@@ -62,15 +61,15 @@ export default function Checkout() {
             });
           })
         );
-  
+
         sentOrderSuccessEmail({
           email: user.email,
-          userName: user.firstname + ' ' + user.lastname,
+          userName: `${user.firstname} ${user.lastname}`,
           orderDate: resOrder.data.orderDate,
           orderCode: resOrder.data.id,
-          orderPrice: '$ ' + resOrder.data.price,
+          orderPrice: `$ ${resOrder.data.price}`,
         });
-  
+
         message.success('Đặt hàng thành công !!');
         dispatch(resetCart());
         navigate(ROUTERS.SUCCESS);
@@ -83,17 +82,6 @@ export default function Checkout() {
       setIsSubmitting(false);
     }
   };
-  
-  const fetchProvince = async()=>{
-    const res = await fetch("https://vapi.vnappmob.com/api/province/")
-    const data = await res.json();
-    console.log(data.results);
-    
-  }
-
-  useEffect(()=>{
-    fetchProvince()
-  }, [])
 
   return (
     <div className="container py-10 mx-auto min-h-[calc(100vh_-_139px)]">
@@ -131,14 +119,14 @@ export default function Checkout() {
               label="Thành Phố / Tỉnh"
               rules={[{ required: true }]}
             >
-              <Input />
+              <Input placeholder="Nhập Tỉnh/Thành" />
             </Form.Item>
             <Form.Item
               name="country"
               label="Quận / Huyện"
               rules={[{ required: true }]}
             >
-              <Input />
+              <Input placeholder="Nhập Quận/Huyện" />
             </Form.Item>
             <Form.Item
               name="phone"
@@ -180,17 +168,15 @@ export default function Checkout() {
                   </p>
                 </div>
               </div>
-              {/* Thêm phần chọn phương thức thanh toán */}
-              <div className='font-semibold'>Phương thức thanh toán :</div>
+              <div className="font-semibold">Phương thức thanh toán :</div>
               <Form.Item
-                
                 name="paymentMethod"
                 initialValue="cod"
                 rules={[{ required: true }]}
               >
                 <Radio.Group onChange={(e) => setPaymentMethod(e.target.value)}>
                   <Radio value="cod">Thanh toán khi nhận hàng</Radio>
-                  <Radio value="card">Thanh toán bằng thẻ</Radio>
+                  <Radio value="card">Thanh toán qua QR Code</Radio>
                 </Radio.Group>
               </Form.Item>
               <Button

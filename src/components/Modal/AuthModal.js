@@ -81,12 +81,12 @@ const Auth = () => {
 					items={[
 						{
 							key: 1,
-							label: `Login`,
+							label: `Đăng Nhập`,
 							children: <Login />,
 						},
 						{
 							key: 2,
-							label: `Register`,
+							label: `Đăng Ký`,
 							children: <Register />,
 						},
 					]}
